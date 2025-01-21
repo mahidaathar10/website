@@ -1,8 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Image2 from 'next/image'
-
-
 const TopBar = () => {
   return (
     <div className="bg-gray-400 text-sm text-gray-700 hidden md:block">
