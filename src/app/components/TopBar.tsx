@@ -1,33 +1,32 @@
+import { FaChevronDown } from "react-icons/fa";
+import Link from "next/link";
 import React from "react";
-const TopBar = () => {
+import { FaCheck, FaExclamationCircle } from "react-icons/fa";
+
+const Topbar = () => {
   return (
-    <div className="bg-gray-400 text-sm text-gray-700 hidden md:block">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-4 max-w-screen-lg mx-auto py-3 px-4">
-        <div className="flex flex-col md:flex-row md:space-x-8 gap-2 md:gap-4">
-          <div>
-            <span>Phone Number: </span>
-            <a href="tel:03354264982" className="text-black hover:underline">
-            03354264982
-            </a>
-          </div>
-          <div>
-            <span>Email: </span>
-            <a
-              href="mailto:info@ddsgnr.com"
-              className="text-black hover:underline"
-            >
-              mahidaathar10@gmail.com
-            </a>
-          </div>
-        </div>
-
-        
-
-
-
+    <div className="w-full flex flex-col sm:flex-row bg-[#272343] pt-[14px] pb-[14px] items-center justify-between h-[45px] sm:h-[50px]">
+      <div className="max-w-screen-xl mx-auto container flex items-center justify-between w-full px-4">
+        <p className="text-white flex items-center space-x-2 font-normal text-center sm:text-left xs:text-left text-[10px] sm:text-[12px] xs:text-[12px]">
+          <FaCheck  />
+          <span>Free shipping on all orders over $50</span>
+        </p>
+        <ul className="text-white flex items-center space-x-4 font-normal text-center sm:text-left xs:text-left text-[10px] sm:text-[12px] xs:text-[12px]">
+          <li className="flex items-center space-x-1 cursor-pointer">
+            <span>Eng</span>
+            <FaChevronDown />
+          </li>
+          <Link href="/faq">
+            <li className="cursor-pointer">FAQs</li>
+          </Link>
+          <li className="flex items-center space-x-2 cursor-pointer">
+            <FaExclamationCircle />
+            <span>Need Help</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
 };
 
-export default TopBar;
+export default Topbar;

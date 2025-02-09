@@ -1,21 +1,19 @@
+import TopBar from "./components/TopBar";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import TopBar from "./components/TopBar";
-import Category from"./components/Category";
-import Footer from "./components/Footer";
-
-
-
+import StyleSection from "./components/StyleSection";
+import ProductSection from "./components/ProductSection";
+import Footer from "./components/Footer"
 
 export default function Home() {
   return (
     <div>
-      <TopBar />
-      <Header />
+      <TopBar/>
+      <Header/>
       <Hero />
-      <Category/>
+      <StyleSection />
+      <ProductSection />
       <Footer />
     </div>
   );
 }
-
